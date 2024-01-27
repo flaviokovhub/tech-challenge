@@ -1,6 +1,7 @@
 package br.com.sistema.jfood.adapters.in.resources.produto;
 
 import br.com.sistema.jfood.adapters.in.resources.produto.request.AtualizarProdutoRequest;
+import br.com.sistema.jfood.adapters.in.resources.produto.request.CategoriaRequest;
 import br.com.sistema.jfood.adapters.in.resources.produto.request.CriarProdutoRequest;
 import br.com.sistema.jfood.adapters.in.resources.produto.response.ListarProdutosResponse;
 import br.com.sistema.jfood.adapters.in.resources.produto.response.ProdutoAtualizadoResponse;
@@ -50,9 +51,9 @@ public class ProdutoResource {
 
     @GetMapping
     @Transactional(readOnly = true)
-    ResponseEntity<?> buscarProdutoPorCategoria(@RequestParam(name = "categoria") @ValidaCategoria(enumClass = Categoria.class, message = "Categoria Invalida!!") String categoria) {
+    ResponseEntity<?> buscarProdutoPorCategoria(@RequestParam(name = "categoria") CategoriaRequest categoria) {
 
-        return ResponseEntity.ok( this.consultaProdutoPort.buscaProdutosPorCategoria(categoria)
+        return ResponseEntity.ok( this.consultaProdutoPort.buscaProdutosPorCategoria(categoria.name())
                 .stream()
                 .map(ListarProdutosResponse::mapper)
                 .collect(Collectors.toList())

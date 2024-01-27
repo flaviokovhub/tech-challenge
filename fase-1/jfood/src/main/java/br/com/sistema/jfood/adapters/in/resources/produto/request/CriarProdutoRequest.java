@@ -1,7 +1,5 @@
 package br.com.sistema.jfood.adapters.in.resources.produto.request;
 
-import br.com.sistema.jfood.adapters.in.resources.produto.validacao.ValidaCategoria;
-import br.com.sistema.jfood.core.domain.produtos.Categoria;
 import br.com.sistema.jfood.core.domain.produtos.Produto;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
@@ -14,12 +12,12 @@ public record CriarProdutoRequest(
         String nome,
         @NotNull
 
+        @DecimalMin(value = "0", inclusive = false)
         BigDecimal preco,
         @NotBlank
         String descricao,
-
-        @ValidaCategoria(enumClass = Categoria.class,message = "Categoria Invalida!!")
-        String categoria,
+        CategoriaRequest categoria,
+        @NotBlank
         String imagem) {
 
         public Produto toProduto() {
@@ -28,7 +26,7 @@ public record CriarProdutoRequest(
                      .comDescricao(descricao)
                      .comPreco(preco)
                      .comNome(nome)
-                     .comCategoria(categoria)
+                     .comCategoria(categoria.name())
                      .build();
         }
 }
