@@ -11,6 +11,7 @@ Clone o projeto
 
 Peças a serem executada via docker-compose
 > 1 - backend jfood-api
+
 > 2 - base de dados relacional postgreSQL
 ```bash
  services:
@@ -57,7 +58,7 @@ Acessando o Swagger:
 > http://localhost:8080/swagger-ui/index.html#/
 
 Endpoints:
-![Alt text](/tech-challenge/fase-1/assets/swagger-ex.png "Endpoints")
+![Alt text](fase-1/assets/swagger-ex.png "Endpoints")
 
 Collections:
-![Alt text](tech-challenge/fase-1/assets/fase-1-Insomnia_2024-01-27 "Collections")
+![Alt text](fase-1/assets/fase-1-Insomnia_2024-01-27 "Collections")
