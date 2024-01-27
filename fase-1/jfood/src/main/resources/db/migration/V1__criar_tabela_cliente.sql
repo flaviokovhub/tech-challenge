@@ -1,0 +1,5 @@
+CREATE TABLE clientes (
+    cpf VARCHAR(12) NOT NULL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
