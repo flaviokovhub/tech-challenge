@@ -58,7 +58,12 @@ Acessando o Swagger:
 > http://localhost:8080/swagger-ui/index.html#/
 
 Endpoints:
-![Alt text](fase-1/assets/swagger-ex.png "Endpoints")
+![Alt text](assets/swagger-ex.png "Endpoints")
+
+[![Swagger][swagger-screenshot]]()
 
 Collections:
-![Alt text](fase-1/assets/fase-1-Insomnia_2024-01-27 "Collections")
+![Alt text](assets/fase-1-Insomnia_2024-01-27 "Collections")
+
+
+[swagger-screenshot]: assets/swagger-ex.png
