@@ -49,9 +49,14 @@ Entre no diretório  tech-challenge/fase-1/jfood/ci
 ```bash
   $ cd ci/
 ```
-Execute:
+Execute para iniciar o ambiente:
 ```bash
   $ docker-compose up
+```
+
+Execute para parar o ambiente:
+```bash
+  $ docker-compose down
 ```
 
 Acessando o Swagger:
@@ -60,10 +65,10 @@ Acessando o Swagger:
 Endpoints:
 ![Alt text](assets/swagger-ex.png "Endpoints")
 
-[![Swagger][swagger-screenshot]]()
-
 Collections:
-![Alt text](assets/fase-1-Insomnia_2024-01-27 "Collections")
+```bash
+  $ cd assets/
+```
 
 
 [swagger-screenshot]: assets/swagger-ex.png
