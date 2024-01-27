@@ -2,6 +2,16 @@
 
 # Fase-1
 
+## Stack inicial
+- Spring-boot
+- Java 20
+- PostgreSQL
+
+## brainstorm realizado
+
+![Alt text](assets/storm.png "brainstorm")
+![Alt text](assets/storm-2.png "brainstorm")
+
 ## Rodando localmente
 
 Clone o projeto
