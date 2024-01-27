@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component
-public class PedidoLeituraRepositorio implements PedidoLeituraPort {
+ class PedidoLeituraRepositorio implements PedidoLeituraPort {
 
     private final PedidoRepository pedidoRepository;
 
